@@ -5,15 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="code.boilerplate.features.MainActivity"
-    tools:showIn="@layout/activity_main">
+   >
 
-    <android.support.v7.widget.RecyclerView
+    <co.moonmonkeylabs.realmrecyclerview.RealmRecyclerView
         android:id="@+id/recycler_view"
-        android:padding="@dimen/space_10"
-        android:background="@android:color/white"
+        app:rrvLayoutType="LinearLayout"
+        android:padding="@dimen/space_8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"/>
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_24"
+        android:text="@string/no_pages" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/snakbar">
+    </android.support.design.widget.CoordinatorLayout>
 
 </RelativeLayout>
